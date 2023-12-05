@@ -1,0 +1,201 @@
+\documentclass[english,11pt,a4paper,titlepage]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{amsmath} % Package for math notation
+
+\usepackage{fontspec} % Requires either XeLaTeX or LuaLaTeX
+\usepackage{titlesec} % Allows alternative section titles
+\usepackage{lastpage} % Used for "n of m" page numbering
+\usepackage{afterpage}
+
+% Color and header/footer cusomization
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+
+% Custom colours
+\definecolor{sectioncolor}{RGB}{0,61,115}
+\definecolor{subsectioncolor}{RGB}{75,75,74}
+
+
+% ------------------------------Package suggestions------------------------------
+% \usepackage{biblatex} % Management of bibliography
+% \usepackage{cleveref} % Enhanced cross-referencing of sections, figures, equations, etc.
+% \usepackage{booktabs} % For better looking tables - highly recommended!
+% \usepackage{siunitx} % Useful for typesetting units and numbers
+% \usepackage{hyperref} % Enables hyperlinks within the LaTeX document and can make ToC, references, and more clickable
+% \usepackage{listings} % Useful for writing algorithms / pseudocode
+% \usepackage{mhchem} % Typesetting of chemical formulas and reactions
+% -------------------------------------------------------------------------------
+
+
+\usepackage{fontspec} % !!!Requires compiling with either XeLaTeX or LuaLaTeX!!! - allows for advanced font selection - also handles font encoding. If you wish to use PDFLaTeX with a natively supported font, you can use the following package instead:
+% \usepackage[T1]{fontenc} 
+
+
+\usepackage{amsmath} % Package for math notation
+\usepackage{setspace}% Package for easy line spacing 
+\usepackage{titlesec} % Allows alternative section titles
+\usepackage{lastpage} % Used for "n of m" page numbering
+\usepackage{afterpage} % Used to remove custom page color of the front page from the remaining pages
+\usepackage{microtype} % Improves spacing between words and letters
+\usepackage{abstract}
+
+% Color and header/footer cusomization
+\usepackage{xcolor}
+\usepackage{graphicx} % Handling graphics
+\usepackage{fancyhdr} % Increased control over headers and footers
+
+% Custom colours
+\definecolor{sectioncolor}{RGB}{0,61,115} % Dark blue color 
+\definecolor{subsectioncolor}{RGB}{75,75,74} % Grey color
+
+% Heading font
+\newfontfamily\headingfont{AUPassata_RG} % Standard AU font, replace this with your favourite font if needed
+
+
+\titleformat*{\section}{\LARGE\headingfont\color{sectioncolor}}
+\titleformat*{\subsection}{\Large\headingfont\color{subsectioncolor}}
+
+% Configure the header
+\pagestyle{fancy}
+\fancyhf{} % Clears all header and footer fields
+%\fancyhead[L]{\includegraphics[height=1.5cm]{img/au_blue.png}} % No department
+%\fancyhead[L]{\includegraphics[height=1.5cm]{img/inano.png}} % Interdisciplinary Nanoscience department
+%\fancyhead[L]{\includegraphics[height=1.5cm]{img/mbg.png}} % Molecular Biology department
+\fancyhead[L]{\includegraphics[height=1.5cm]{img/birc.png}} % Bioinformatics Research department
+
+\fancyhead[R]{\includegraphics[height=1.5cm]{img/ausegl.png}} % Dolphin seal
+
+%\fancyfoot[C]{\headingfont\thepage} % Page number in footer
+
+\fancyfoot[C]{\headingfont\thepage\ of \pageref{LastPage}} % Page number of total pages in footer
+
+\fancyfoot[C]{\headingfont\thepage\ of \pageref{LastPage}} % "m of n" page numbering in footer
+
+
+\usepackage{geometry} % Allows easy change of page layout (margin size etc.)
+% Page layout
+\geometry{
+	top=0.5cm, % Adjust top margin
+	right=4.2cm, % Adjust right margin
+	left=4.2cm, % Adjust left margin,
+	bottom=3cm, % Adjust bottom margin
+	headheight=3.5cm, % Adjust header height
+	headsep=1.0cm, % Spacing between header and text
+	includeheadfoot % Include header and footer
+	}
+
+% Main font
+\setmainfont{Georgia}
+
+
+% Package for easy line spacing 
+\usepackage{setspace}
+
+
+
+
+\usepackage{kantlipsum} % Sample text - can be removed 
+
+
+
+
+\newfontfamily\titlefont{AUPassata_BOLD} % Font for paper title
+
+% ------------------------------ Custom Front Page Commands ------------------------------
+% These commands define the layout and styling for the front pages of the document.
+% They require 7 parameters:
+% #1: The title of the document.
+% #2: The first author's name.
+% #3: The department or affiliation of the first author.
+% #4: The second author's name (if applicable).
+% #5: The department or affiliation of the second author (if applicable).
+% #6: Path to an image file to be displayed on the front page.
+% #7: Any additional information or text to be included at the bottom (e.g., supervisor's name).
+% Example usage: \frontpageBlue{My Title}{My Name}{My Department}{Partner's Name}{Partner's Department}{path/to/image.jpg}{Additional Info}
+
+
+% Setup for front page with blue background color
+\newcommand{\frontpageBlue}[7]{
+	\begin{titlepage}
+		\pagecolor{sectioncolor}\afterpage{\nopagecolor}
+		\centering
+		\includegraphics[width=0.5\textwidth]{img/ausegl_hvid.png}\par
+		\vspace*{1cm}
+		{\fontsize{34}{40}\selectfont\color{white}\titlefont #1\par} % Title
+		\vspace{2cm}
+		{\color{white}\Large\headingfont #2\par} % Author 1
+		{\color{white}\large\headingfont #3\par} % Department author 1
+		\vspace{1cm}
+		{\color{white}\Large\headingfont #4\par} % Author 2
+		{\color{white}\large\headingfont #5\par} % Department author 2
+		\vspace{1cm}
+		\includegraphics[width=0.5\textwidth]{#6} % Image
+		\vfill
+		%{\color{white}\Large\headingfont Supervisor\par} % Additional info
+		{\color{white}\Large\headingfont #7}
+	\end{titlepage}
+}
+
+
+% Setup for front page with white background color
+\newcommand{\frontpageWhite}[7]{
+	\begin{titlepage}
+		\centering
+		\includegraphics[width=0.5\textwidth]{img/ausegl.png}\par
+		\vspace*{1cm}
+		{\fontsize{34}{40}\selectfont\color{sectioncolor}\titlefont #1\par} % Title
+		\vspace{2cm}
+		{\Large\headingfont\color{sectioncolor} #2\par} % Author 1
+		{\large\headingfont\color{sectioncolor} #3\par} % Department author 1
+		\vspace{1cm}
+		{\Large\headingfont\color{sectioncolor} #4\par} % Author 2
+		{\large\headingfont\color{sectioncolor} #5\par} % Department author 2
+		\vspace{1cm}
+		\includegraphics[width=0.5\textwidth]{#6} % Image
+		\vfill
+		%{\Large\headingfont\color{sectioncolor} Supervisor\par} % Additional information
+		{\Large\headingfont\color{sectioncolor} #7}
+	\end{titlepage}	
+}
+
+% Setting up the abstract section
+\renewcommand{\abstractnamefont}{\normalfont\Large\bfseries} % Set the "Abstract" title to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to italic
+
+
+
+%------------------------------Beginning of document-------------------------------------
+
+
+\begin{document}
+\setstretch{1.309} % Line spacing
+\setlength{\parindent}{25pt} % Indentation at beginning of new paragraph
+
+
+\frontpageWhite{A systematic review of...}{Sample Author One}{Sample Department One}{Sample Author Two}{Sample Department Two}{img/au_blue.png}{}
+
+\begin{abstract}
+	\noindent % No indentation for abstracts!
+	\kant[1]
+\end{abstract}
+
+
+\section{Introduction}
+\kant[2]	
+
+	\subsection{Intro subsection}
+	\kant[3]
+
+\section{Methods}
+\kant[4]
+
+\section{Results}
+\kant[5]
+
+\section{Discussion}
+\kant[6]
+
+	
+\end{document}
