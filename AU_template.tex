@@ -1,22 +1,24 @@
 \documentclass[english,11pt,a4paper,titlepage]{article}
 
-\usepackage[T1]{fontenc}
-\usepackage{amsmath} % Package for math notation
+\usepackage{fontspec} % !!!Requires compiling with either XeLaTeX or LuaLaTeX!!! - allows for advanced font selection - also handles font encoding. If you wish to use PDFLaTeX with a natively supported font, you can use the following package instead:
+% \usepackage[T1]{fontenc} 
 
+\usepackage{amsmath} % Package for math notation
 \usepackage{fontspec} % Requires either XeLaTeX or LuaLaTeX
 \usepackage{titlesec} % Allows alternative section titles
 \usepackage{lastpage} % Used for "n of m" page numbering
-\usepackage{afterpage}
-
-% Color and header/footer cusomization
+\usepackage{afterpage} % Used to remove background color from pages after title page
+\usepackage{amsmath} % Package for math notation
+\usepackage{setspace}% Package for easy line spacing 
+\usepackage{titlesec} % Allows alternative section titles
+\usepackage{lastpage} % Used for "n of m" page numbering
+\usepackage{afterpage} % Used to remove custom page color of the front page from the remaining pages
+\usepackage{microtype} % Improves spacing between words and letters
+\usepackage{abstract} % Custom abstract section
+\usepackage{setspace} % Package for easy line spacing 
 \usepackage{xcolor}
-\usepackage{graphicx}
-\usepackage{fancyhdr}
-
-% Custom colours
-\definecolor{sectioncolor}{RGB}{0,61,115}
-\definecolor{subsectioncolor}{RGB}{75,75,74}
-
+\usepackage{graphicx} % Handling graphics
+\usepackage{fancyhdr} % Increased control over headers and footers
 
 % ------------------------------Package suggestions------------------------------
 % \usepackage{biblatex} % Management of bibliography
@@ -28,31 +30,12 @@
 % \usepackage{mhchem} % Typesetting of chemical formulas and reactions
 % -------------------------------------------------------------------------------
 
-
-\usepackage{fontspec} % !!!Requires compiling with either XeLaTeX or LuaLaTeX!!! - allows for advanced font selection - also handles font encoding. If you wish to use PDFLaTeX with a natively supported font, you can use the following package instead:
-% \usepackage[T1]{fontenc} 
-
-
-\usepackage{amsmath} % Package for math notation
-\usepackage{setspace}% Package for easy line spacing 
-\usepackage{titlesec} % Allows alternative section titles
-\usepackage{lastpage} % Used for "n of m" page numbering
-\usepackage{afterpage} % Used to remove custom page color of the front page from the remaining pages
-\usepackage{microtype} % Improves spacing between words and letters
-\usepackage{abstract}
-
-% Color and header/footer cusomization
-\usepackage{xcolor}
-\usepackage{graphicx} % Handling graphics
-\usepackage{fancyhdr} % Increased control over headers and footers
-
 % Custom colours
 \definecolor{sectioncolor}{RGB}{0,61,115} % Dark blue color 
 \definecolor{subsectioncolor}{RGB}{75,75,74} % Grey color
 
 % Heading font
 \newfontfamily\headingfont{AUPassata_RG} % Standard AU font, replace this with your favourite font if needed
-
 
 \titleformat*{\section}{\LARGE\headingfont\color{sectioncolor}}
 \titleformat*{\subsection}{\Large\headingfont\color{subsectioncolor}}
@@ -68,9 +51,6 @@
 \fancyhead[R]{\includegraphics[height=1.5cm]{img/ausegl.png}} % Dolphin seal
 
 %\fancyfoot[C]{\headingfont\thepage} % Page number in footer
-
-\fancyfoot[C]{\headingfont\thepage\ of \pageref{LastPage}} % Page number of total pages in footer
-
 \fancyfoot[C]{\headingfont\thepage\ of \pageref{LastPage}} % "m of n" page numbering in footer
 
 
@@ -88,10 +68,6 @@
 
 % Main font
 \setmainfont{Georgia}
-
-
-% Package for easy line spacing 
-\usepackage{setspace}
 
 
 
