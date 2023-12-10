@@ -16,11 +16,11 @@
 \usepackage{microtype} % Improves spacing between words and letters
 \usepackage{abstract} % Custom abstract section
 \usepackage{setspace} % Package for easy line spacing 
-\usepackage{xcolor}
+\usepackage{xcolor} % Kind of self-explanatory... Handles colors
 \usepackage{graphicx} % Handling graphics
 \usepackage{fancyhdr} % Increased control over headers and footers
 
-% ------------------------------Package suggestions------------------------------
+% ------Package suggestions------
 % \usepackage{biblatex} % Management of bibliography
 % \usepackage{cleveref} % Enhanced cross-referencing of sections, figures, equations, etc.
 % \usepackage{booktabs} % For better looking tables - highly recommended!
@@ -28,7 +28,7 @@
 % \usepackage{hyperref} % Enables hyperlinks within the LaTeX document and can make ToC, references, and more clickable
 % \usepackage{listings} % Useful for writing algorithms / pseudocode
 % \usepackage{mhchem} % Typesetting of chemical formulas and reactions
-% -------------------------------------------------------------------------------
+% ------------------------------
 
 % Custom colours
 \definecolor{sectioncolor}{RGB}{0,61,115} % Dark blue color 
@@ -43,15 +43,15 @@
 % Configure the header
 \pagestyle{fancy}
 \fancyhf{} % Clears all header and footer fields
-%\fancyhead[L]{\includegraphics[height=1.5cm]{img/au_blue.png}} % No department
+\fancyhead[L]{\includegraphics[height=1.1cm]{img/au_blue2.png}} % No department
 %\fancyhead[L]{\includegraphics[height=1.5cm]{img/inano.png}} % Interdisciplinary Nanoscience department
 %\fancyhead[L]{\includegraphics[height=1.5cm]{img/mbg.png}} % Molecular Biology department
-\fancyhead[L]{\includegraphics[height=1.5cm]{img/birc.png}} % Bioinformatics Research department
+%\fancyhead[L]{\includegraphics[height=1.5cm]{img/birc.png}} % Bioinformatics Research department
 
 \fancyhead[R]{\includegraphics[height=1.5cm]{img/ausegl.png}} % Dolphin seal
 
-%\fancyfoot[C]{\headingfont\thepage} % Page number in footer
-\fancyfoot[C]{\headingfont\thepage\ of \pageref{LastPage}} % "m of n" page numbering in footer
+\fancyfoot[C]{\headingfont\thepage} % Page number in footer
+%\fancyfoot[C]{\headingfont\thepage\ of \pageref{LastPage}} % "m of n" page numbering in footer
 
 
 \usepackage{geometry} % Allows easy change of page layout (margin size etc.)
@@ -93,12 +93,12 @@
 
 
 % Setup for front page with blue background color
-\newcommand{\frontpageBlue}[7]{
+\newcommand{\frontpageBlue}[8]{
 	\begin{titlepage}
 		\pagecolor{sectioncolor}\afterpage{\nopagecolor}
 		\centering
-		\includegraphics[width=0.5\textwidth]{img/ausegl_hvid.png}\par
-		\vspace*{1cm}
+		\includegraphics[width=0.5\textwidth]{#7}\par
+		\vspace{1cm}
 		{\fontsize{34}{40}\selectfont\color{white}\titlefont #1\par} % Title
 		\vspace{2cm}
 		{\color{white}\Large\headingfont #2\par} % Author 1
@@ -107,20 +107,20 @@
 		{\color{white}\Large\headingfont #4\par} % Author 2
 		{\color{white}\large\headingfont #5\par} % Department author 2
 		\vspace{1cm}
-		\includegraphics[width=0.5\textwidth]{#6} % Image
+		\includegraphics[width=0.5\textwidth]{#8} % Image
 		\vfill
 		%{\color{white}\Large\headingfont Supervisor\par} % Additional info
-		{\color{white}\Large\headingfont #7}
+		{\color{white}\Large\headingfont #6}
 	\end{titlepage}
 }
 
 
 % Setup for front page with white background color
-\newcommand{\frontpageWhite}[7]{
+\newcommand{\frontpageWhite}[8]{
 	\begin{titlepage}
 		\centering
-		\includegraphics[width=0.5\textwidth]{img/ausegl.png}\par
-		\vspace*{1cm}
+		\includegraphics[width=0.5\textwidth]{#7}\par
+		\vspace{1cm}
 		{\fontsize{34}{40}\selectfont\color{sectioncolor}\titlefont #1\par} % Title
 		\vspace{2cm}
 		{\Large\headingfont\color{sectioncolor} #2\par} % Author 1
@@ -129,10 +129,10 @@
 		{\Large\headingfont\color{sectioncolor} #4\par} % Author 2
 		{\large\headingfont\color{sectioncolor} #5\par} % Department author 2
 		\vspace{1cm}
-		\includegraphics[width=0.5\textwidth]{#6} % Image
+		\includegraphics[width=0.5\textwidth]{#8} % Image
 		\vfill
 		%{\Large\headingfont\color{sectioncolor} Supervisor\par} % Additional information
-		{\Large\headingfont\color{sectioncolor} #7}
+		{\Large\headingfont\color{sectioncolor} #6}
 	\end{titlepage}	
 }
 
@@ -142,7 +142,7 @@
 
 
 
-%------------------------------Beginning of document-------------------------------------
+%-----------------Beginning of document--------------------
 
 
 \begin{document}
@@ -150,7 +150,13 @@
 \setlength{\parindent}{25pt} % Indentation at beginning of new paragraph
 
 
-\frontpageWhite{A systematic review of...}{Sample Author One}{Sample Department One}{Sample Author Two}{Sample Department Two}{img/au_blue.png}{}
+% ------ Blue front page ------
+%\frontpageBlue{A systematic review of...}{Sample Author One}{Sample Department One}{Sample Author Two}{Sample Department Two}{}{img/ausegl_hvid.png}{img/au_white.png}
+
+
+% ------ White front page ------
+\frontpageWhite{A systematic review of...}{Sample Author One}{Sample Department One}{}{}{}{img/ausegl.png}{img/au_blue.png}
+
 
 \begin{abstract}
 	\noindent % No indentation for abstracts!
