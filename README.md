@@ -11,8 +11,9 @@ The font used for the title and headers is the AU Passata font created by Aarhus
 ### Changing the front page
 There are currently two versions of the template, the difference being the front page:
 
-![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/fp_blue.png "Blue front page")
-![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/fp_white.png "White front page")
+Blue front page            |  White front page
+:-------------------------:|:-------------------------:
+![Blue front page](/src/fp_blue.png)   |  ![White front page](/src/fp_white.png)
 
 
 The blue front page is enabled by having the following line uncommented:
@@ -47,8 +48,7 @@ The front pages can take up to eight arguments:
 7. Top image (standard is the seal of Aarhus University)
 8. Bottom image (standards is the logo of Aarhus University)
 
-![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/fp_args.png "Front page with arguments")
-
+<img src='/src/fp_args.png' alt='Front page with arguments' width='400'>
 
 To generate the front page as in the image above, the `\frontpageWhite` command must look like this:
 
@@ -66,7 +66,7 @@ Example: if there's only one author and the "additional info" text is not needed
 
 This would produce the following front page:
 
-![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/fp_oneauthor.png)
+<img src='/src/fp_oneauthor.png' alt='Front page with one author' width='400'>
 
 Images on the front page can be changed if you'd rather want something else that relates to your work. As mentioned earlier, the larger [AU seal](https://medarbejdere.au.dk/en/administration/communication/guidelines/seal)
  is argument number seven in the front page command, and the smaller [AU logo](https://medarbejdere.au.dk/en/administration/communication/guidelines/guidelinesforlogo) is the final and eighth argument. For easy swapping of either, copy the image you want to use into the `img` directory that comes with the repository, and simply change the name in the front page command:
@@ -87,7 +87,7 @@ Note that depending on the size of the image you want to use, you may have to pl
 		\vspace{2cm} % <--- customize the space between title and author one
 		{\Large\headingfont\color{sectioncolor} #2\par}
 		{\large\headingfont\color{sectioncolor} #3\par}
-		\vspace{1cm} <--- customize the space between the authors
+		\vspace{1cm} %<--- customize the space between the authors
 		{\Large\headingfont\color{sectioncolor} #4\par}
 		{\large\headingfont\color{sectioncolor} #5\par}
 		\vspace{1cm} % <--- customize the space between the second author and the small image
@@ -112,7 +112,7 @@ There's currently four different headers to choose between, which can be chosen 
 %\fancyhead[L]{\includegraphics[height=1.5cm]{img/mbg.png}} % Molecular Biology department
 %\fancyhead[L]{\includegraphics[height=1.5cm]{img/birc.png}} % Bioinformatics Research department
 ```
-![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/nodep_header.png "Header with no department")
+<img src='/src/nodep_header.png' alt='Header with no department' width='500'>
 
 #### iNano header
 ```latex
@@ -124,7 +124,7 @@ There's currently four different headers to choose between, which can be chosen 
 %\fancyhead[L]{\includegraphics[height=1.5cm]{img/mbg.png}} % Molecular Biology department
 %\fancyhead[L]{\includegraphics[height=1.5cm]{img/birc.png}} % Bioinformatics Research department
 ```
-![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/inano_header.png "iNano header")
+<img src='/src/inano_header.png' alt='iNano header' width='500'>
 
 #### Molecular Biology header
 ```latex
@@ -136,7 +136,7 @@ There's currently four different headers to choose between, which can be chosen 
 \fancyhead[L]{\includegraphics[height=1.5cm]{img/mbg.png}} % Molecular Biology department
 %\fancyhead[L]{\includegraphics[height=1.5cm]{img/birc.png}} % Bioinformatics Research department
 ```
-![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/molbio_header.png "Molecular Biology header")
+<img src='/src/molbio_header.png' alt='Molecular biology header' width='500'>
 
 #### Bioinformatics Research Center header
 ```latex
@@ -148,23 +148,21 @@ There's currently four different headers to choose between, which can be chosen 
 %\fancyhead[L]{\includegraphics[height=1.5cm]{img/mbg.png}} % Molecular Biology department
 \fancyhead[L]{\includegraphics[height=1.5cm]{img/birc.png}} % Bioinformatics Research department
 ```
-![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/nodep_header.png " BiRC header")
+<img src='/src/birc_header.png' alt='BiRC header' width='500'>
 
 ### Footers
 There are two different type of footers that changes the type of page numbering used. In the same way as with the headers, you can choose between them by un-commenting the relevant variant:
 
 #### Current page only
-
 ```latex
 \fancyfoot[C]{\headingfont\thepage} % Page number in footer
 %\fancyfoot[C]{\headingfont\thepage\ of \pageref{LastPage}} % "m of n" page numbering in footer
 ```
-![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/current_footer.png "Current page footer")
+<img src='/src/current_footer.png' alt='Current page footer' width='80'>
 
 #### m of n pages
 ```latex
 %\fancyfoot[C]{\headingfont\thepage} % Page number in footer
 \fancyfoot[C]{\headingfont\thepage\ of \pageref{LastPage}} % "m of n" page numbering in footer
 ```
-![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/m_of_n_footer.png "m-of-n footer")
-
+<img src='/src/m_of_n_footer.png' alt='m-of-n footer' width='100'>
