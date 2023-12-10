@@ -11,8 +11,8 @@ The font used for the title and headers is the AU Passata font created by Aarhus
 ### Changing the front page
 There are currently two versions of the template, the difference being the front page:
 
-![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/fp_blue.png)
-![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/fp_white.png)
+![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/fp_blue.png "Blue front page")
+![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/fp_white.png "White front page")
 
 
 The blue front page is enabled by having the following line uncommented:
@@ -47,7 +47,7 @@ The front pages can take up to eight arguments:
 7. Top image (standard is the seal of Aarhus University)
 8. Bottom image (standards is the logo of Aarhus University)
 
-![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/fp_args.png)
+![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/fp_args.png "Front page with arguments")
 
 
 To generate the front page as in the image above, the `\frontpageWhite` command must look like this:
@@ -112,7 +112,7 @@ There's currently four different headers to choose between, which can be chosen 
 %\fancyhead[L]{\includegraphics[height=1.5cm]{img/mbg.png}} % Molecular Biology department
 %\fancyhead[L]{\includegraphics[height=1.5cm]{img/birc.png}} % Bioinformatics Research department
 ```
-![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/nodep_header.png)
+![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/nodep_header.png "Header with no department")
 
 #### iNano header
 ```latex
@@ -124,7 +124,7 @@ There's currently four different headers to choose between, which can be chosen 
 %\fancyhead[L]{\includegraphics[height=1.5cm]{img/mbg.png}} % Molecular Biology department
 %\fancyhead[L]{\includegraphics[height=1.5cm]{img/birc.png}} % Bioinformatics Research department
 ```
-![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/inano_header.png)
+![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/inano_header.png "iNano header")
 
 #### Molecular Biology header
 ```latex
@@ -136,7 +136,7 @@ There's currently four different headers to choose between, which can be chosen 
 \fancyhead[L]{\includegraphics[height=1.5cm]{img/mbg.png}} % Molecular Biology department
 %\fancyhead[L]{\includegraphics[height=1.5cm]{img/birc.png}} % Bioinformatics Research department
 ```
-![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/molbio_header.png)
+![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/molbio_header.png "Molecular Biology header")
 
 #### Bioinformatics Research Center header
 ```latex
@@ -148,7 +148,7 @@ There's currently four different headers to choose between, which can be chosen 
 %\fancyhead[L]{\includegraphics[height=1.5cm]{img/mbg.png}} % Molecular Biology department
 \fancyhead[L]{\includegraphics[height=1.5cm]{img/birc.png}} % Bioinformatics Research department
 ```
-![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/nodep_header.png)
+![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/nodep_header.png " BiRC header")
 
 ### Footers
 There are two different type of footers that changes the type of page numbering used. In the same way as with the headers, you can choose between them by un-commenting the relevant variant:
@@ -159,12 +159,12 @@ There are two different type of footers that changes the type of page numbering 
 \fancyfoot[C]{\headingfont\thepage} % Page number in footer
 %\fancyfoot[C]{\headingfont\thepage\ of \pageref{LastPage}} % "m of n" page numbering in footer
 ```
-![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/current_footer.png)
+![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/current_footer.png "Current page footer")
 
 #### m of n pages
 ```latex
 %\fancyfoot[C]{\headingfont\thepage} % Page number in footer
 \fancyfoot[C]{\headingfont\thepage\ of \pageref{LastPage}} % "m of n" page numbering in footer
 ```
-![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/m_of_n_footer.png)
+![alt-text](https://github.com/rasmusfreund/latexTemplate/tree/main/src/m_of_n_footer.png "m-of-n footer")
 
