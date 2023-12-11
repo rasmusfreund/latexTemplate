@@ -11,9 +11,9 @@ The font used for the title and headers is the AU Passata font created by Aarhus
 ### Changing the front page
 There are currently two versions of the template, the difference being the front page:
 
-Blue front page            |  White front page
+| | |
 :-------------------------:|:-------------------------:
-![Blue front page](/src/fp_blue.png)   |  ![White front page](/src/fp_white.png)
+<img src='/src/fp_blue.png' alt='Blue front page' width='400'> | <img src='/src/fp_white.png' alt='White front page' width='400'>
 
 
 The blue front page is enabled by having the following line uncommented:
