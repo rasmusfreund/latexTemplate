@@ -1,6 +1,6 @@
 # LaTeX template for assignments at Aarhus University
 
-This template has been created as a general template for various assignments during my master's in Bioinformatics at Aarhus University. Anyone should feel free to use it for whatever they may need, and change anything that doesn't suit their needs. Below I've attempted to create a general guide for using the template; I personally use [TeXstudio](https://www.texstudio.org/#download) to edit the source code, along with the [MiKTeX](https://miktex.org/download) distribution of LaTeX.
+This template has been created as a general template for various assignments during my master's in Bioinformatics at Aarhus University. Anyone should feel free to use it for whatever they may need, and change anything that doesn't suit their needs. Below I've attempted to create a general guide for using the template; I personally use [TeXstudio](https://www.texstudio.org/#download) to edit the source code, along with the [MiKTeX](https://miktex.org/download) distribution of LaTeX (if Mac users experience problems with MiKTeX, they might want to use [MacTeX](https://www.tug.org/mactex/mactex-download.html) instead).
 
 The font used for the title and headers is the AU Passata font created by Aarhus University. The font can be downloaded for free [here](https://medarbejdere.au.dk/en/administration/communication/guidelines/guidelinesforfonts) - specifically, the AU Passata Regular and AU Passata Bold are being used. The main text is the Georgia font, which is standard for both Windows and Mac.
 
